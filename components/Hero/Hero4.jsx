@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero4 = ({ data }) => {
     return (
-        <div className="section-spacing-xl bg-black-40" style={{ padding: '60px 0' }}>
+        <div className="bg-black-40" style={{ position: 'relative', overflow: 'hidden', padding: '300px 0' }}>
             <div className="bg-video">
                 {data.youtubeId ? (
                     <iframe
@@ -26,23 +26,6 @@ const Hero4 = ({ data }) => {
                         <source src={data.videoSrc} type="video/mp4" />
                     </video>
                 )}
-            </div>
-            <div className="container text-center">
-                <div className="row">
-                    <div className="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                        <div style={{ padding: '8px 0' }}>
-                            {data.heroPng ? (
-                                <img
-                                    src={data.heroPng}
-                                    alt={data.title || ''}
-                                    style={{ width: '63%', height: 'auto', maxWidth: '630px', display: 'inline-block' }}
-                                />
-                            ) : (
-                                <h1 className="display-1 fw-semi-bold uppercase mb-0">{data.title}</h1>
-                            )}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )
