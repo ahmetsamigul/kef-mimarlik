@@ -1,0 +1,27 @@
+//
+// Your Custom styles //
+//
+
+@font-face {
+    font-family: 'SloopScript';
+    src: url('/fonts/Sloop-ScriptThree.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-sloop {
+    font-family: 'SloopScript', cursive;
+}
+
+@keyframes kef-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.kef-marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: kef-marquee 50s linear infinite;
+}
